@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="content">
+  <h2 class="mb-0">{{title .Title}}</h2>
+  <ul class="ml-10 mt-0" style="list-style: none;">
+  {{ range .Data.Pages.GroupByDate "2006"}}
+     <h3 class="mb-5">{{.Key}}</h3>
+     {{ range .Pages}}
+     <li class="mb-0">
+       <a href={{.RelPermalink}}>{{.Title}}</a>
+       <span class="float-right" id="date">{{ if isset .Site.Params "listdateformat" }} 
+                                 {{ .Date.Format .Site.Params.listDateFormat }}
+                                 {{ else }} {{.Date.Format "02 Jan."}} 
+                                 {{ end }}
+     </li>
+
+     {{ end }}
+  {{ end }}
+</div>
+{{ end }}

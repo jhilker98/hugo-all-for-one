@@ -1,0 +1,17 @@
+{{ partial "post/date-info.html" .}}
+<br>
+<span class="mb-0">
+  <!-- 
+       Post Categories and Tags
+       Since it calls the range in the partial it doesn't need to be called here.
+    -->
+  {{ if isset .Params "categories"}}
+    {{ partial "post/single/categories.html" . }}
+  {{ end }}
+  <br>
+  {{ if isset .Params "tags"}}
+    <span class="text-right">
+      {{ partial "post/single/tags.html" . }}
+    </span>
+    {{ end }}
+</span>

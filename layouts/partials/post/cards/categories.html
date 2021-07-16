@@ -1,0 +1,8 @@
+{{ $linkbase := .Site.BaseURL}}
+<i class="fas fa-folder-open"></i>
+{{ range .Page.Params.categories}}
+{{ $item := (. | urlize)}}
+<span class="badge">
+  <a class="text-muted" href={{printf "%s/%s/%s" $linkbase "categories"  $item | relLangURL}}>{{.}}</a>
+</span>
+{{ end }}

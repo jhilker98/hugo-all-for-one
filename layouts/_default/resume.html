@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="container-fluid pl-20 mr-20 pr-10" id="resume">
+    <div class="row">
+        <div class="col-md-9 pr-10">
+            <div class="d-lg-none">
+                <h1>Contact</h1>
+                <div class="wrapper">
+                  {{ partial "resume/contact.html" . }}
+                </div>    
+                <h1>Skills</h1>
+                <div class="wrapper">
+                  {{ partial "resume/skills-main.html" . }}
+                </div>    
+                <h1>Interests</h1>
+                <div class="wrapper">
+                  {{ partial "resume/interests-main.html" . }}
+                </div>    
+            </div>
+            <div class="pt-15">
+            {{ .Content }}
+            </div>
+        </div>
+         <div class="col-3 border-left hidden-md-and-down" id="detailsCol">
+              <br />
+              {{ partial "resume/contact.html" . }}
+              <h4 class="mb-5 ml-5">Skills</h4>
+              {{ partial "resume/skills.html" . }}
+             
+              <h4 class="mb-5 ml-5">Interests</h4>
+              {{ partial "resume/interests.html" . }} 
+         </div>
+    </div>
+</div>
+{{ end }}

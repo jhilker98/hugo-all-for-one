@@ -1,0 +1,31 @@
+# This file is a template, and might need editing before it works on your project.
+---
+# All available Hugo versions are listed here:
+# https://gitlab.com/pages/hugo/container_registry
+image: registry.gitlab.com/pages/hugo:latest
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+
+test:
+  before_script:
+    - apk add --update --no-cache git
+  script:
+    # - hugo --enableGitInfo -b "https://jhilker.gitlab.io"
+    - hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://jhilker.gitlab.io/hugo-all-for-one/
+  except:
+    - main
+
+pages:
+  before_script:
+    - apk add --update --no-cache git
+  script:
+  #  - hugo --enableGitInfo -b "https://jhilker.gitlab.io"
+     - hugo --minify --gc --destination ../public --source ./exampleSite --themesDir ../.. --baseURL https://jhilker.gitlab.io/hugo-all-for-one/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+

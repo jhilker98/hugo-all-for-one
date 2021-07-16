@@ -1,0 +1,23 @@
+<div class="col-lg-6">
+  <div class="card">
+    <h2 class="card-title">{{.Title}}</h2>
+     <span>
+            <i class="{{.Page.Params.icon}} mt-5"></i>
+            &nbsp;
+            {{.Page.Params.srclang}}
+          </span>
+          <span style="float: right;">
+            {{.Page.Params.status}}
+          </span>
+
+    <p>{{.Summary}}</p>
+    <span>
+            <a href="{{.Page.Params.projectsite}}" class="btn">
+              <i class="fas fa-globe"></i>
+              &nbsp;
+              Website
+            </a>
+            <a href="{{.Page.Params.projectrepo}}" class="btn ml-5 float-right">Project Repo</a>
+          </span>
+</div>
+</div>

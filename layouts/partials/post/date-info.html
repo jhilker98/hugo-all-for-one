@@ -1,0 +1,22 @@
+<span class="postInfo">
+  <i class="fas fa-calendar"></i> 
+  {{ if isset .Site.Params "singledateformat"}}
+  &nbsp;{{.Date.Format .Site.Params.singledateformat}}
+  {{ else }}
+  &nbsp;{{ .Date.Format "Mon, 02 Jan. 2006"}}
+  {{ end }}
+  &nbsp;
+  <i class='fas fa-stopwatch'></i>
+  {{ .ReadingTime }}-minute read
+  &nbsp;
+  {{ if ne .Date .Lastmod }}
+  <i class="fas fa-calendar"></i> 
+  Last updated:
+  {{ if isset .Site.Params "singledateformat"}}
+  &nbsp;{{.Lastmod.Format .Site.Params.singledateformat}}
+  {{ else }}
+  &nbsp;{{ .Lastmod.Format "Mon, 02 Jan. 2006"}}
+  {{ end }}
+  {{ end }}
+</span>
+

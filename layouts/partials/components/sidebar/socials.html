@@ -1,0 +1,14 @@
+{{ $.Scratch.Set "iconCount" 0 }}
+<div class="socials d-med-none d-inline-block">
+       {{ range .Site.Params.socials }}
+    <a id="social" href={{index . "url"}}>
+        <i class={{index . "icon"}}></i>
+    </a>
+    &nbsp;
+    {{ $.Scratch.Set "iconCount" (add ($.Scratch.Get "iconCount") 1) }}
+    {{ $iconCount := $.Scratch.Get "iconCount" }}
+    {{ if eq (mod $iconCount 7) 0 }}
+    <br />
+    {{ end }}
+    {{ end }}
+</div>

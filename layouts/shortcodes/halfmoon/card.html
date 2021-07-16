@@ -1,0 +1,8 @@
+<div class='card {{with .Get "class"}} {{ . }} {{ end }}'>
+  {{ with .Get "title"}}
+  <h2 class="card-title">
+    {{ . }}
+  </h2>
+{{ end }}
+{{.Inner | markdownify }}
+</div>

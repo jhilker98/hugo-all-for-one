@@ -1,0 +1,13 @@
+<div class="skillList">
+  <ul>
+    {{ range .Page.Params.skills}}
+    <li class="mb-5">{{.}}</li>
+    {{ end }}
+  </ul>
+  <ul>
+    {{ range .Page.Params.soft_skills}}
+    <li class="mb-5">{{.}}</li>
+    {{ end }}
+  </ul>
+
+</div>

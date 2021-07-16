@@ -1,0 +1,26 @@
+<div class="exp">
+    <div id="expInfo" class="mb-10">
+      <span class="font-size-20 text-wrap">
+          {{ with .Get "name"}}
+          {{ . }}
+          {{ end }}
+          </span>
+        <span id="dates" class="hidden-md-and-down">
+            {{dateFormat "Jan 2006" (.Get "start")}} - {{if .Get "end"}}{{ dateFormat "Jan 2006" (.Get "end")}}{{else}}Present{{end}} 
+        </span>
+      <p class="d-lg-none">
+            {{dateFormat "Jan 2006" (.Get "start")}} - {{if .Get "end"}}{{ dateFormat "Jan 2006" (.Get "end")}}{{else}}Present{{end}} 
+          </p>
+
+        <p class="mt-5 text-wrap">
+          {{ with .Get "place"}}
+          {{ . }}
+          {{ end }}
+          - 
+          {{ with .Get "city"}}
+          {{ . }}
+          {{ end }}
+        </p>
+      </div>
+      {{ .Inner | markdownify}}
+</div>

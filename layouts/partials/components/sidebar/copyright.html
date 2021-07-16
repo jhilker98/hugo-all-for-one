@@ -1,0 +1,7 @@
+<p id="copyright" class="font-size-12 position-absolute bottom-0">
+    {{ if isset .Site.Params "copyright" }}
+    {{ .Site.Params.copyright}}
+    {{ else}}
+    &copy; 2021-{{ now.Format "2006" }} {{.Site.Params.author}}
+    {{ end }}
+</p>

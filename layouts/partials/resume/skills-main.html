@@ -1,0 +1,11 @@
+<ul style="list-style: none;">
+  {{ range .Page.Params.skills}}
+  <li class="mb-5 pl-5">{{.}}</li>
+  {{ end }}
+</ul>
+<ul style="list-style: none;">
+  {{ range .Page.Params.soft_skills}}
+    <li class="mb-5 pl-5">{{.}}</li>
+  {{ end }}
+</ul>
+

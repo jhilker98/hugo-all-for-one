@@ -1,0 +1,135 @@
+baseURL = "https://gohugo.io"
+title = "My New Hugo Site"
+author = "Jacob Hilker"
+theme = "hugo-all-for-one"
+themesDir = "../../"
+enableEmoji = true
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+#linenos = true
+#pygmentsOptions = "linenos=table"
+paginate = 3
+[params]
+title = "My New Hugo Site"
+author = "Jacob Hilker"
+description = "This is a website."
+profilePic = "http://via.placeholder.com/150"
+themePref = "dark"
+mainSections = ["post"]
+enableToc = false
+customCss = []
+customJs = []
+portfolio_paginate = 4
+
+[params.js]
+plotly = false
+
+[[params.socials]]
+icon = "fab fa-gitlab"
+url = "#"
+name = "Gitlab"
+
+[[params.socials]]
+icon = "fab fa-github"
+url = "#"
+name = "Github"
+
+[[params.socials]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "#"
+
+[[params.socials]]
+icon = "fab fa-dev"
+title = "Dev.to"
+url = "#"
+
+[[params.socials]]
+icon = "fab fa-codepen"
+title = "CodePen"
+url = "#"
+
+[[params.socials]]
+icon = "fas fa-envelope"
+title = "Contact"
+url = "#"
+
+[params.math]
+enable = true
+use = "mathjax"
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+identifier = "post"
+name = "Posts"
+url = "/post/"
+weight = 3
+#pre = "<i class=\"fas fa-book\"></i>"
+
+[[menu.main]]
+identifier = "resume"
+name = "Resume"
+url = "/resume"
+weight = 4
+
+[[menu.main]]
+identifier = "portfolio"
+name = "Projects"
+url = "/Projects"
+weight = 5
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+    
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+
+ [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "date"
+    weight = 10

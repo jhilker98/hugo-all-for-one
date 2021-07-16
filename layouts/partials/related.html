@@ -1,0 +1,10 @@
+{{ $related := .Site.RegularPages.Related . | first 5 }}
+{{ with $related }}
+<h3 class="content-title mb-0">See Also</h3>
+<ul>
+	{{ range . }}
+	<li style="list-style-type: none;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+	{{ end }}
+</ul>
+{{ end }}
+

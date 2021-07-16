@@ -1,0 +1,28 @@
+<div class="col-lg-4">
+      <div class="w-400 mw-full"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+        <div class="card">
+          <h2 class="card-title">
+           {{ .Title }}
+          </h2>
+          <span>
+            <i class="{{.Page.Params.icon}} mt-5"></i>
+            &nbsp;
+            {{.Page.Params.srclang}}
+          </span>
+          <span style="float: right;">
+            {{.Page.Params.status}}
+          </span>
+          <p class="text-muted">
+            {{.Summary}}
+          </p>
+          <span>
+            <a href="{{.Page.Params.projectsite}}" class="btn">
+              <i class="fas fa-globe"></i>
+              &nbsp;
+              Website
+            </a>
+            <a href="{{.Page.Params.projectrepo}}" class="btn" style="float: right;">Project Repo</a>
+          </span>
+          </div>
+      </div>
+</div>

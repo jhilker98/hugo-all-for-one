@@ -1,0 +1,15 @@
+<div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
+<div class="sidebar">
+ <div class="sidebar-menu">
+   <div class="personal-content">
+     <h4 id="title">{{.Site.Params.title}}</h4>
+     <img class="sidebar-img img-fluid" src={{.Site.Params.profilePic | relURL}} alt="User profile picture">
+     <p>{{.Site.Params.description}}</p>
+     {{ partial "components/sidebar/socials.html" . }}
+     <div class="sidebar-divider d-lg-none"></div>
+     {{ partial "components/sidebar/theme-toggle.html" . }}
+     {{ partial "components/sidebar/user.html" . }}
+     {{ partial "components/sidebar/copyright.html" . }}
+    </div>
+ </div>
+</div>

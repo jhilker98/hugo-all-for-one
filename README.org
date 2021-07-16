@@ -1,0 +1,22 @@
+#+title: Hugo All for One
+#+html:  <a href="https://github.com/jhilker1/hugo-all-for-one/actions/workflows/ci.yml"><img src="https://img.shields.io/github/workflow/status/jhilker1/hugo-all-for-one/Github%20Pages?style=flat-square" alt="Github Pages" /></a>
+#+html: <a href="https://github.com/jhilker1/hugo-all-for-one/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/jhilker1/hugo-all-for-one?style=flat-square&color=blue"></a>
+#+html: <a href="https://github.com/jhilker1/hugo-all-for-one/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhilker1/hugo-all-for-one?color=blue&style=flat-square"></a>
+#+html: <a href="https://github.com/jhilker1/hugo-all-for-one/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhilker1/hugo-all-for-one?style=flat-square"></a>
+
+All for One is a Hugo theme built with Halfmoon that intends to cover several use cases of a personal website - namely that of a blog, resume, and portfolio.
+
+
+
+* Getting Started
+** Installation
+Installing All for One to your website is an easy process.
+#+BEGIN_SRC bash
+git submodule add https://github.com/jhilker1/hugo-all-for-one.git themes/all-for-one
+#+END_SRC
+
+
+* Features
+    - Dark Mode
+    - Multiple layouts and shortcodes.
+    - LaTeX math with MathJax or KaTex.

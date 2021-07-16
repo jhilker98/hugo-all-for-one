@@ -1,0 +1,6 @@
+{{ $linkbase := .Site.BaseURL}}
+<i class="fas fa-tags" style="padding-left: 5px;"></i>
+{{ range .Page.Params.tags}}
+{{ $item := (. | urlize)}}
+<a href={{printf "%s/%s/%s" $linkbase "tags"  $item | relLangURL}}>{{.}}</a>
+{{ end }}

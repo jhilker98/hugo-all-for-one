@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+{{ $portpages := .Site.Params.portfolio_paginate}}
+
+<div class="container-fluid">
+  <div class="row align-items-start">
+    {{range (where (where .Site.RegularPages "Type" "project") ".Params.featured" "==" true).ByWeight }}
+    {{ partial "portfolio/featured.html" . }}
+    {{ end }}
+  
+    {{ $paginator := .Paginate (where (where .Site.RegularPages "Type" "project") ".Params.featured" "!=" true) $portpages }}
+    {{ range $paginator.Pages }}
+    {{ partial "portfolio/project.html" .}}
+    {{ end }}
+    </div>
+  <div class="pagination-rounded text-center">
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+{{ end }}

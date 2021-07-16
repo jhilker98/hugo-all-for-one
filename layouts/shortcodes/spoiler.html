@@ -1,0 +1,9 @@
+<details class='collapse-panel {{with .Get "class"}} {{.}} {{ end }}'> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+  
+  <summary class="collapse-header">
+    {{.Get "title"}}
+  </summary>
+  <div class="collapse-content">
+    {{.Inner | markdownify}}
+  </div>
+</details>
