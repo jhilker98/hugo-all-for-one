@@ -1,23 +1,55 @@
-<div class="col-lg-6">
-  <div class="card">
-    <h2 class="card-title">{{.Title}}</h2>
-     <span>
-            <i class="{{.Page.Params.icon}} mt-5"></i>
-            &nbsp;
-            {{.Page.Params.srclang}}
-          </span>
-          <span style="float: right;">
-            {{.Page.Params.status}}
-          </span>
+<div class="card">
+  <h3 class="card-title">
+    {{.Page.Params.title}}
+    {{ if (eq .Page.Params.featured true)}}
+    {{ partial "portfolio/featured.html"}}
+    {{ end }}
+  </h3>
 
-    <p>{{.Summary}}</p>
-    <span>
-            <a href="{{.Page.Params.projectsite}}" class="btn">
-              <i class="fas fa-globe"></i>
-              &nbsp;
-              Website
-            </a>
-            <a href="{{.Page.Params.projectrepo}}" class="btn ml-5 float-right">Project Repo</a>
-          </span>
+  <span>
+    <b>Status:</b> {{.Page.Params.status}}
+  </span>
+  
+  <p>
+    {{.Summary}}
+  </p>
+
+ {{ range .Page.Params.srclangs}} 
+  {{ $name := .name}}
+  {{ $icon := .icon}}
+  <span class="badge">
+  <i class="{{.icon}}"></i>
+  &nbsp;
+  {{.name}}
+  </span>
+  {{ end }} 
+
+<p/>
+<div class="btn-group">
+  <a href="{{.Page.Params.projectsite}}" class="btn">
+    <i class="fas fa-globe"></i>
+    &nbsp;
+    Website
+    </a>
+
+  {{ with .Page.Params.repo}}
+  <a href="https://{{.host}}/{{.link}}" class="btn ml-5">
+    <i class="{{.icon}}"></i>
+    &nbsp;
+    Repository
+    </a>
+  {{ end }}
+
+ {{ range .Page.Params.socials}} 
+  {{ $name := .name}}
+  {{ $icon := .icon}}
+    <a href="{{.link}}" class="btn ml-5">
+  <i class="{{.icon}}"></i>
+  &nbsp;
+  {{.name}}
+  </a>
+  {{ end }} 
+
+
 </div>
 </div>

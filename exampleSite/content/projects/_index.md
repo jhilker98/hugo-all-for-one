@@ -1,5 +1,4 @@
----
-title: Projects
-layout: portfolio
----
-
++++ 
+title = "Projects"
+layout = "portfolio"
++++

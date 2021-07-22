@@ -182,3 +182,8 @@ margin-top:10px;
     list-style: none;
     padding: 0;
 }
+
+.badge {
+    font-family: var(--base-font);
+    letter-spacing: 0;
+}
