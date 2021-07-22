@@ -8,7 +8,7 @@
         <span id="dates" class="hidden-md-and-down">
             {{dateFormat "Jan 2006" (.Get "start")}} - {{if .Get "end"}}{{ dateFormat "Jan 2006" (.Get "end")}}{{else}}Present{{end}} 
         </span>
-      <p class="d-lg-none">
+      <p id="mobile-dates" class="d-lg-none">
             {{dateFormat "Jan 2006" (.Get "start")}} - {{if .Get "end"}}{{ dateFormat "Jan 2006" (.Get "end")}}{{else}}Present{{end}} 
           </p>
 

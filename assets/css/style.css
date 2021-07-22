@@ -187,3 +187,8 @@ margin-top:10px;
     font-family: var(--base-font);
     letter-spacing: 0;
 }
+
+#mobile-dates {
+    font-family: var(--base-font);
+    letter-spacing: 0;
+}
