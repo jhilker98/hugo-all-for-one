@@ -1,10 +1,16 @@
 <div class="card">
-  <h3 class="card-title">
+  <h3 class="card-title mb-5">
     {{.Page.Params.title}}
     {{ if (eq .Page.Params.featured true)}}
     {{ partial "portfolio/featured.html"}}
     {{ end }}
   </h3>
+
+    {{ if (eq .Page.Params.featured true)}}
+    {{ partial "portfolio/featured-mobile.html"}}
+    {{ end }}
+
+  {{ partial "portfolio/langs.html" . }}
 
   <span>
     <b>Status:</b> {{.Page.Params.status}}
@@ -14,42 +20,6 @@
     {{.Summary}}
   </p>
 
- {{ range .Page.Params.srclangs}} 
-  {{ $name := .name}}
-  {{ $icon := .icon}}
-  <span class="badge">
-  <i class="{{.icon}}"></i>
-  &nbsp;
-  {{.name}}
-  </span>
-  {{ end }} 
-
-<p/>
-<div class="btn-group">
-  <a href="{{.Page.Params.projectsite}}" class="btn">
-    <i class="fas fa-globe"></i>
-    &nbsp;
-    Website
-    </a>
-
-  {{ with .Page.Params.repo}}
-  <a href="{{.link}}" class="btn ml-5">
-    <i class="{{.icon}}"></i>
-    &nbsp;
-    Repository
-    </a>
-  {{ end }}
-
- {{ range .Page.Params.socials}} 
-  {{ $name := .name}}
-  {{ $icon := .icon}}
-    <a href="{{.link}}" class="btn ml-5">
-  <i class="{{.icon}}"></i>
-  &nbsp;
-  {{.name}}
-  </a>
-  {{ end }} 
-
-
+{{ partial "portfolio/socials.html" .}} 
 </div>
-</div>
+

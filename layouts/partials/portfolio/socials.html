@@ -1,0 +1,30 @@
+<div class="btn-group d-inline-flex justify-content-center align-items-center">
+  <a href="{{.Page.Params.projectsite}}" class="btn">
+    <i class="fas fa-globe"></i>
+    Site
+    </a>
+
+  {{ with .Page.Params.repo}}
+  <a href="{{.link}}" class="btn ml-5 w-20">
+    <i class="{{.icon}}"></i>
+    Repo
+    </a>
+  {{ end }}
+ 
+  {{ if .Page.Params.socials}}
+  <div class="dropdown with-arrow ml-5">
+    <button class="btn" data-toggle="dropdown" type="button" id="..." aria-haspopup="true" aria-expanded="false">
+      <i class="fas fa-link"></i> Links <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5 = margin-left: 0.5rem (5px) -->
+    </button>
+    <div class="dropdown-menu dropdown-menu-center" aria-labelledby="...">
+      {{ range .Page.Params.socials}}
+      <a href="{{.link}}" class="dropdown-item">
+        <i class="{{.icon}} mr-5"></i>
+        {{.name}}
+  </a>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ end }}
+</div>

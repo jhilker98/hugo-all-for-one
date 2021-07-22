@@ -1,0 +1,11 @@
+{{ range .Page.Params.srclangs}} 
+  {{ $name := .name}}
+  {{ $icon := .icon}}
+  <span class="badge mt-5">
+  <i class="{{.icon}}"></i>
+  {{.name}}
+  </span>
+  {{ end }} 
+
+
+ <p/>
