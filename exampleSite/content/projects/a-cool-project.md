@@ -10,8 +10,7 @@ srclangs:
    - name: Flutter
      icon: devicon-flutter-plain
 repo:
-    host: github.com
-    link: jhilker1/hugo-all-for-one
+    link: https://github.com/jhilker1/hugo-all-for-one
     icon: devicon-github-plain
 ---
 

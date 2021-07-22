@@ -9,8 +9,7 @@ srclangs:
      icon: devicon-javascript-plain
 projectsite: https://jhilker1.github.io/hugo-all-for-one
 repo:
-    host: github.com
-    link: jhilker1/hugo-all-for-one
+    link: https://github.com/jhilker1/hugo-all-for-one
     icon: devicon-github-plain
 ---
 A hello world project, written in Javascript.
