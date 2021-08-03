@@ -3,7 +3,13 @@
   <h3>{{.Title}}</h3>
 <ul>
     {{ range .Data.Terms.ByCount }}
-            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="float-right">{{ .Count }} Post{{ if gt .Count 1}}s{{end}}</span></li>
+            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="float-right">{{ .Count }} Post{{ if gt .Count 1}}s{{end}}</span>
+              {{ if .Page.Params.description}}
+              {{ .Page.Params.description}}
+              {{ else}}
+              {{.Page.Summary}}
+              {{ end }}
+            </li>
     {{ end }}
 </ul>
 </div>
