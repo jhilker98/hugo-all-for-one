@@ -19,7 +19,6 @@ mainSections = ["post"]
 enableToc = false
 customCss = []
 customJs = []
-portfolio_paginate = 4
 
 [params.js]
 plotly = false
@@ -133,3 +132,8 @@ weight = 5
   [[related.indices]]
     name = "date"
     weight = 10
+
+[taxonomies]
+  category = 'categories'
+  series = 'series'
+  tag = 'tags'
