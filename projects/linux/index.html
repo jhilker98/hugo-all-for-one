@@ -14,7 +14,7 @@
 <meta name=twitter:description content="A free and open-source kernel.">
 </head>
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled=true data-sidebar-shortcut-enabled=true data-set-preferred-mode-onload=true>
-<div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="full-height overlayed-sm-and-down">
+<div class="page-wrapper with-navbar with-sidebar with-navbar-fixed-bottom" data-sidebar-type="full-height overlayed-sm-and-down">
 <nav class=navbar>
 <div class=navbar-content>
 <button class="btn btn-action" type=button onclick=halfmoon.toggleSidebar()>
@@ -120,7 +120,28 @@ Linux
 </div>
 </div>
 </div>
+<nav class="navbar navbar-fixed-bottom">
+<ul class="navbar-nav d-none d-md-flex">
+<li class="nav-item dropdown dropup with-arrow">
+<a class=nav-link data-toggle=dropdown id=bottom-nav-link-dropdown-toggle>
+&nbsp;Main Repo
+<i class="fa fa-angle-up ml-5" aria-hidden=true></i>
+</a>
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby=bottom-nav-link-dropdown-toggle>
+<a href=https://github.com/jhilker1/hugo-all-for-one/issues class=dropdown-item>&nbsp;Issues</a>
 </div>
+</li>
+<li class=nav-item>
+<a href=https://github.com/jhilker1/hugo-all-for-one/wiki class=nav-link> &nbsp;Docs</a>
+</li>
+<li class=nav-item>
+<a href=https://github.com/jhilker1/hugo-all-for-one/projects/2 class=nav-link> &nbsp;Roadmap</a>
+</li>
+</ul>
+<span class="navbar-text ml-auto">
+&copy; This is a website.
+</span>
+</nav>
 </div>
 <script src=https://jhilker1.github.io/hugo-all-for-one/js/halfmoon.min.9dda67a3037ca73d329f4faa3763c45c588f74139aff20cc2542a8f8458917d4.js onload=halfmoon.toggleDarkMode()></script>
 </body>
