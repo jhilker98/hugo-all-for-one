@@ -1,41 +1,15 @@
 {{ define "main" }}
-<div class="row">
-   <!-- Column with the main content -->
-   <div class="col-lg-9">
-     <div class="content">
-       <h1 class="title"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
-         {{ .Title | title}}
-       </h1>
-       {{ if eq .Type "post"}}
-       {{ partial "components/post/single/head.html" .}}
-       {{ end }}
-       {{ .Content }}
-     </div>
-   </div>
-<div class="col-lg-3 d-none d-lg-block"> <!-- d-none = display: none, d-lg-block = display: block only on large screens and up (> 992px) -->
-     <div class="content">
-       {{ if or (eq .Site.Params.enableToc true) (eq .Params.enableToc true) }} 
-       {{ partial "components/post/single/toc.html" . }}
-       {{ end }}
-       {{ if eq .Type "post"}}
-       {{ partial "components/post/single/related.html" . }}
-       {{ end }}
-     </div>
-   </div>
+
+{{ if ne .Type "post"}}
+<div class="content">
+  <h1 class="title">{{.Title | title}}</h1>
+  {{.Content}}
 </div>
+{{ end }}
 
-{{if and (eq .Site.Params.commentsrc "disqus") (eq .Type "post")}}
- <div id="fb_comments_container">
-   <h2>{{i18n "comments"}}</h2>
-   {{ template "_internal/disqus.html" . }}
- </div>
- {{ end }}
+{{ if eq .Type "post"}}
+{{ partial "post.html" . }}
+{{ end }}
 
-{{if and (eq .Type "post") (eq .Site.Params.commentsrc "utterances")}}
- <div id="fb_comments_container">
-   <h2>{{i18n "comments"}}</h2>
-   {{ partial "comments/utterances.html" . }}
- </div>
- {{ end }}
 
 {{ end }}
