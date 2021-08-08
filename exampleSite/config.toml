@@ -97,20 +97,19 @@ weight = 1
 identifier = "issues"
 name = "Issues"
 url = "https://github.com/jhilker1/hugo-all-for-one/issues"
-weight = 1
-parent = "repo"
+weight = 2
 
 [[menu.btm]]
 identifier = "docs"
 name = "Docs"
 url = "https://github.com/jhilker1/hugo-all-for-one/wiki"
-weight = 2
+weight = 3
 
 [[menu.btm]]
 identifier = "roadmap"
 name = "Roadmap"
 url = "https://github.com/jhilker1/hugo-all-for-one/projects/2"
-weight = 3
+weight = 4
 
 
 
