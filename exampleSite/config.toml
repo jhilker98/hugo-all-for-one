@@ -1,6 +1,5 @@
 baseURL = "https://gohugo.io"
 title = "My New Hugo Site"
-author = "Jacob Hilker"
 theme = "hugo-all-for-one"
 themesDir = "../../"
 enableEmoji = true
@@ -9,6 +8,8 @@ pygmentsCodeFences = true
 #linenos = true
 #pygmentsOptions = "linenos=table"
 paginate = 3
+copyright = "this is some cool shit"
+
 [params]
 title = "My New Hugo Site"
 author = "Jacob Hilker"
@@ -19,9 +20,7 @@ mainSections = ["post"]
 enableToc = false
 customCss = []
 customJs = []
-
-[params.js]
-plotly = false
+enableBottomNav = true
 
 [[params.socials]]
 icon = "fab fa-gitlab"
@@ -87,6 +86,33 @@ identifier = "portfolio"
 name = "Projects"
 url = "/Projects"
 weight = 5
+
+[[menu.btm]]
+identifier = "repo"
+name = "Main Repo"
+url = "https://github.com/jhilker1/hugo-all-for-one"
+weight = 1
+
+[[menu.btm]]
+identifier = "issues"
+name = "Issues"
+url = "https://github.com/jhilker1/hugo-all-for-one/issues"
+weight = 1
+parent = "repo"
+
+[[menu.btm]]
+identifier = "docs"
+name = "Docs"
+url = "https://github.com/jhilker1/hugo-all-for-one/wiki"
+weight = 2
+
+[[menu.btm]]
+identifier = "roadmap"
+name = "Roadmap"
+url = "https://github.com/jhilker1/hugo-all-for-one/projects/2"
+weight = 3
+
+
 
 [privacy]
 

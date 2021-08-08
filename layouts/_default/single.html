@@ -7,7 +7,7 @@
          {{ .Title | title}}
        </h1>
        {{ if eq .Type "post"}}
-       {{ partial "post/head.html" .}}
+       {{ partial "components/post/single/head.html" .}}
        {{ end }}
        {{ .Content }}
      </div>
@@ -15,10 +15,10 @@
 <div class="col-lg-3 d-none d-lg-block"> <!-- d-none = display: none, d-lg-block = display: block only on large screens and up (> 992px) -->
      <div class="content">
        {{ if or (eq .Site.Params.enableToc true) (eq .Params.enableToc true) }} 
-       {{ partial "toc.html" . }}
+       {{ partial "components/post/single/toc.html" . }}
        {{ end }}
        {{ if eq .Type "post"}}
-       {{ partial "related.html" . }}
+       {{ partial "components/post/single/related.html" . }}
        {{ end }}
      </div>
    </div>

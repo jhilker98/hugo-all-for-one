@@ -2,15 +2,15 @@
   <h3 class="card-title mb-5">
     {{.Page.Params.title}}
     {{ if (eq .Page.Params.featured true)}}
-    {{ partial "portfolio/featured.html"}}
+    {{ partial "components/project/featured.html"}}
     {{ end }}
   </h3>
 
     {{ if (eq .Page.Params.featured true)}}
-    {{ partial "portfolio/featured-mobile.html"}}
+    {{ partial "components/project/featured-mobile.html"}}
     {{ end }}
 
-  {{ partial "portfolio/langs.html" . }}
+  {{ partial "components/project/langs.html" . }}
 
   <span>
     <b>Status:</b> {{.Page.Params.status}}
@@ -20,6 +20,6 @@
     {{.Summary}}
   </p>
 
-{{ partial "portfolio/socials.html" .}} 
+{{ partial "components/project/socials.html" .}} 
 </div>
 

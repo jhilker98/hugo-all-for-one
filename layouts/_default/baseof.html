@@ -4,15 +4,19 @@
 
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true"
     data-sidebar-shortcut-enabled="true" data-set-preferred-mode-onload="true">
-    <div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="full-height overlayed-sm-and-down">
+    <div class="page-wrapper with-navbar with-sidebar {{if .Site.Params.enableBottomNav}}with-navbar-fixed-bottom{{end}}" data-sidebar-type="full-height overlayed-sm-and-down">
         {{ partial "navbar.html" . }}
         {{ partial "sidebar.html" . }} <!-- contains the overlay div on-click for toggling as well -->
 
         <div class="content-wrapper">
             {{- block "main" . }}{{- end }}
         </div>
+        {{if .Site.Params.enableBottomNav}}
+        {{ partial "bottom-nav.html" .}}
+        {{ end }}
+
     </div>
-    </div>
+
     {{- partial "footer.html" . -}}
 </body>
 

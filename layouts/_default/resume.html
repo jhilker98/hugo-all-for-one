@@ -5,30 +5,31 @@
             <div class="d-lg-none">
                 <h1>Contact</h1>
                 <div class="wrapper">
-                  {{ partial "resume/contact.html" . }}
+                  {{ partial "components/resume/contact.html" .}}
                 </div>    
                 <h1>Skills</h1>
                 <div class="wrapper">
-                  {{ partial "resume/skills-main.html" . }}
+                  {{ partial "components/resume/skills-mobile.html" .}}
                 </div>    
                 <h1>Interests</h1>
                 <div class="wrapper">
-                  {{ partial "resume/interests-main.html" . }}
+                  {{ partial "components/resume/interests-mobile.html" .}}
                 </div>    
             </div>
             <div class="pt-15">
             {{ .Content }}
             </div>
         </div>
-         <div class="col-3 border-left hidden-md-and-down" id="detailsCol">
-              <br />
-              {{ partial "resume/contact.html" . }}
-              <h4 class="mb-5 ml-5">Skills</h4>
-              {{ partial "resume/skills.html" . }}
-             
-              <h4 class="mb-5 ml-5">Interests</h4>
-              {{ partial "resume/interests.html" . }} 
-         </div>
+        <div class="col-3 border-left hidden-md-and-down" id="detailsCol">
+          <br />
+          {{ partial "components/resume/contact.html" .}}
+          
+          <h4 class="mb-0 ml-5">Skills</h4>
+          {{ partial "components/resume/skills.html" .}}
+
+         <h4 class="mb-5 ml-5">Interests</h4>
+              {{ partial "components/resume/interests.html" . }}  
+        </div>
     </div>
 </div>
 {{ end }}

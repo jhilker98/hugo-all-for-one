@@ -1,13 +1,14 @@
 <div class="skillList">
+  <strong class="text-decoration-underline ml-5 font-weight-bold mt-5">Technical</strong>
   <ul>
     {{ range .Page.Params.skills}}
     <li class="mb-5">{{.}}</li>
     {{ end }}
   </ul>
-  <ul>
+  <strong class="text-decoration-underline ml-5 font-weight-bold mt-5">Professional</strong>
+ <ul>
     {{ range .Page.Params.soft_skills}}
     <li class="mb-5">{{.}}</li>
     {{ end }}
   </ul>
-
 </div>

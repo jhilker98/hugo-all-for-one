@@ -34,11 +34,11 @@
             Since it calls the range in the partial it doesn't need to be called here.
             -->
             {{ if isset .Params "categories"}}
-                {{ partial "post/cards/categories.html" . }}
+                {{ partial "components/post/card/categories.html" . }}
             {{ end }}
             {{ if isset .Params "tags"}}
             <span class="text-right">
-                {{ partial "post/cards/tags.html" . }}
+                {{ partial "components/post/card/tags.html" . }}
             </span>
             {{ end }}
         </span>

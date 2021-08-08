@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{ define "main"}}
 <div class="container-fluid">
   {{range (where (where .Site.RegularPages "Type" "project") ".Params.featured" "==" true).ByWeight }}
   {{ partial "portfolio/project.html" . }}
