@@ -3,14 +3,20 @@
   <h3>{{.Title}}</h3>
 <ul>
     {{ range .Data.Terms.ByCount }}
-            <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> <span class="float-right">{{ .Count }} Post{{ if gt .Count 1}}s{{end}}</span>
-              {{ if .Page.Params.description}}
+    <div class="card w-70 mw-100 shadow-lg">
+      <a href="{{.Page.RelPermalink}}"><h2 class="card-title">{{.Page.Title}}</h2></a>
+    <span class="d-inline-block">
+      {{ .Count }} Post{{ if gt .Count 1}}s{{end}}
+    </span>
+<br/>
+ {{ if .Page.Params.description}}
               {{ .Page.Params.description}}
               {{ else}}
               {{.Page.Summary}}
-              {{ end }}
-            </li>
+              {{ end }} 
+    </div> 
     {{ end }}
 </ul>
 </div>
 {{ end }}
+

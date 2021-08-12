@@ -4,15 +4,6 @@
   {{.Content}}
   <ul>
   {{ range .Pages}}
- <li class="mb-0">
-       <a href={{.RelPermalink}}>{{.Title}}</a>
-       <span class="float-right pr-5" id="date">{{ if isset .Site.Params "listdateformat" }} 
-                                 {{ .Date.Format .Site.Params.listDateFormat }}
-                                 {{ else }} {{.Date.Format "02 Jan."}} 
-                                 {{ end }}</span>
-                                 <p/>
-                                 <div class="ml-20">
-                                 {{.Summary}}
-                                 </div> 
-  {{ end}}
+  {{ partial "post/card.html" .}}
+  {{ end }}
 {{ end }}
