@@ -1,6 +1,3 @@
 [submodule "github-wiki"]
 	path = docs/github
 	url = https://github.com/jhilker1/hugo-all-for-one.wiki.git
-[submodule "gitlab-wiki"]
-	path = docs/gitlab
-	url = https://gitlab.com:jhilker/hugo-all-for-one.wiki.git
