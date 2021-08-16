@@ -4,7 +4,6 @@
 #+html: <a href="https://github.com/jhilker1/hugo-all-for-one/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/jhilker1/hugo-all-for-one?color=blue&style=flat-square"></a>
 #+html: <a href="https://github.com/jhilker1/hugo-all-for-one/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jhilker1/hugo-all-for-one?style=flat-square"></a><br/>
 
-#+html: <a href="https://gitlab.com/jhilker/hugo-all-for-one/-/commits/main"><img alt="Gitlab pipeline status" src="https://img.shields.io/gitlab/pipeline/jhilker/hugo-all-for-one/main?label=Gitlab%20CI%2FCD&logo=gitlab&style=flat-square"></a>
 
 All for One is a Hugo theme built with Halfmoon that intends to cover several use cases of a personal website - namely that of a blog, resume, and portfolio.
 
