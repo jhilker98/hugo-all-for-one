@@ -1,4 +1,8 @@
 <div class="container-fluid">
+  {{ if isset .Page.Params "thumbnail"}}
+
+  <img src="{{.Page.Params.thumbnail}}" class="w-full h-200 img-fluid" style="object-fit: cover;"/>
+  {{ end }}
   <div class="row">
     <div class="col-lg-9">
       <div class="content">
