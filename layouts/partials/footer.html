@@ -1,5 +1,5 @@
 {{ $halfmoonJs := resources.Get "js/halfmoon.js" | resources.Minify | resources.Fingerprint}}
-<script src="{{$halfmoonJs.Permalink}}" {{if eq .Site.Params.themePref "dark"}} onload="halfmoon.toggleDarkMode();"{{end}}></script>
+<script src="{{$halfmoonJs.RelPermalink}}" {{if eq .Site.Params.themePref "dark"}} onload="halfmoon.toggleDarkMode();"{{end}}></script>
 {{ if or (eq .Params.Math true) (eq .Site.Params.math true) }}
     {{ partial "math.html" . }}
 {{ end }}
